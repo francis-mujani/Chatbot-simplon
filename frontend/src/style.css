@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.chatbox {
+  background: #ccc;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  border-radius: 5px 5px 0 0;
+  width:350px;
+  height: 500px;
+  overflow: hidden;
+  border: solid #3B5998;
+}
+
+.chatbox-header {
+  padding: 10px;
+  overflow: hidden;
+  background: #3B5998;
+  color: white;
+}
+
+.chatbox-agent {
+  float: left;
+  font-weight: bold;
+}
+
+.chatbox-close {
+  float: right;
+}
+
+.chatbox-conversation {
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px;
+  background: #fff;
+  overflow: auto;
+  position: absolute;
+  top: 38px;
+  bottom: 31px;
+}
+
+.chatbox-conversation__message {
+  margin: 0 0 50px;
+  display: inline-block;
+  width: 100%;
+}
+
+.chatbox-conversation__message--from > .chatbox-message__content {
+  float: left;
+  clear: both;
+}
+
+.chatbox-conversation__message--to > .chatbox-message__content {
+  float: right;
+  clear: both;
+}
+
+.chatbox-conversation__message--from > .chatbox-message__sender > .chatbox-message__photo {
+  margin-right: 6px;
+}
+
+.chatbox-conversation__message--to > .chatbox-message__sender > .chatbox-message__photo {
+  margin-left: 6px;
+}
+
+.chatbox-message__sender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.chatbox-conversation__message--to > .chatbox-message__sender {
+  float: right;
+}
+
+.chatbox-conversation__message--from > .chatbox-message__sender {
+  float: left;
+  flex-direction: row-reverse;
+}
+
+.chatbox-message__content {
+  padding: 5px 12px;
+  background: lightskyblue;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 5px 0 0;
+}
+
+.chatbox-message__photo {
+  border-radius: 100%;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  overflow: hidden;
+}
+
+.chatbox-message__content > p {
+  margin: 0;
+}
+
+.chatbox-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: lightgrey;
+  padding: 15px 10px;
+}

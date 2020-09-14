@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    image: "simplon/frontend:0.1.0"
+    ports:
+      - "0.0.0.0:80:80"
+    networks:
+      - chatbot-net
+    
+  nodered:
+    build:
+      context: ./nodered
+      dockerfile: ./Dockerfile
+    image: "simplon/nodered:0.1.0"
+    ports:
+      - "0.0.0.0:1880:1880"
+    networks:
+      - chatbot-net
+
+  nlp:
+    build:
+      context: ./nlp
+      dockerfile: ./Dockerfile
+    ports:
+      - 8181:5000
+    volumes:
+      - ./nlp:/app
+    networks:
+      - chatbot-net
+      
+networks:
+  chatbot-net:
