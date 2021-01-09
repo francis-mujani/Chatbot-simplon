@@ -55,5 +55,5 @@ POST: http://localhost:1880/chatbot
 payload:
 {
     "message": "your sentence"
-}
+} 
 ```
